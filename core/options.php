@@ -48,10 +48,23 @@
             }
 
             public function setSections() {
+                //for change the content in header top
+                $this->sections[] = array(
+                    'title'  => __( 'Header top', 'thachpham' ),
+                    'desc'   => __( 'Change the content default', 'thachpham' ),
+                    'icon'   => '',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
 
-
+                        array(
+                            'id'       => 'header-top-left',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Change content of header top', 'thachpham' ),
+                        ),
+                    )
+                );
                 // ACTUAL DECLARATION OF SECTIONS
-                //for change the logo in header
+                //for change the logo in header and the header information
                 $this->sections[] = array(
                     'title'  => __( 'Header', 'thachpham' ),
                     'desc'   => __( 'All of setings for header on this theme.', 'thachpham' ),
@@ -75,25 +88,37 @@
                             'title' => __('Logo Image', 'thachpham'),
                             'desc'  => __('Image that you want to use as logo.', 'thachpham')
                         ),
+                         array(
+                            'id'       => 'live-help',
+                            'type'     => 'text',
+                            'title'    => __( 'Change live help of header middle', 'thachpham' ),
+                        ),
+                         array(
+                            'id'       => 'open-time',
+                            'type'     => 'text',
+                            'title'    => __( 'Change opentime of header middle', 'thachpham' ),
+                        ),
+                         array(
+                            'id'       => 'email',
+                            'type'     => 'text',
+                            'title'    => __( 'Change email of header middle', 'thachpham' ),
+                        ),
                     )
                 );
-
-                // ACTUAL DECLARATION OF SECTIONS
-                    //for change the logo in footer
-                $this->sections[] = array(
+                //for change the logo in footer and the footer information
+                  $this->sections[] = array(
                     'title'  => __( 'Footer', 'thachpham' ),
                     'desc'   => __( 'All of setings for footer on this theme.', 'thachpham' ),
                     'icon'   => '',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
-
                         array(
                             'id'       => 'logo-ft-on',
                             'type'     => 'switch',
-                            'title'    => __( 'Enable Image Logo In Footer', 'thachpham' ),
+                            'title'    => __( 'Enable Image Logo Footer', 'thachpham' ),
                             'compiler' => 'bool',
                             // Can be set to false to allow any media type, or can also be set to any mime type.
-                            'desc'     => __( 'Do you want to enable image logo for footer?', 'thachpham' ),
+                            'desc'     => __( 'Do you want to enable image logo  for footer?', 'thachpham' ),
                             'on'        => __('Enabled', 'thachpham'),
                             'off'       => __('Disabled', 'thachpham')
                         ),
@@ -103,19 +128,70 @@
                             'title' => __('Logo Footer Image', 'thachpham'),
                             'desc'  => __('Image that you want to use as logo.', 'thachpham')
                         ),
+                         array(
+                            'id'       => 'ft-description',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Change the description content in footer', 'thachpham' ),
+                        ), 
+                          array(
+                            'id'       => 'ft-social',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Change the socail icon  in footer', 'thachpham' ),
+                        ), 
+                        
+                    )
+                );
+                //option for change the contact infor in footer
+                $this->sections[] = array(
+                    'title'  => __( 'Contact Footer', 'thachpham' ),
+                    'desc'   => __( 'Change the contact content in footer', 'thachpham' ),
+                    'icon'   => '',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+                         array(
+                            'id'       => 'location',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the location', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                        array(
+                            'id'       => 'phone',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the phone number', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                         array(
+                            'id'       => 'mail',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the email', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                          array(
+                            'id'       => 'www',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the www', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                        
                     )
                 );   
-                
+
                  $this->sections[] = array(
-                    'title'  => __( 'Copyright', 'thachpham' ),
+                    'title'  => __( 'Copyright Footer', 'thachpham' ),
                     'desc'   => __( 'Change the text copyright in footer', 'thachpham' ),
                     'icon'   => '',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
                          array(
-                            'id'       => 'description-above',
+                            'id'       => 'left-bl-ft',
                             'type'     => 'textarea',
                             'title'    => __( 'Edit or remove the description-above footer', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                         array(
+                            'id'       => 'middle-bl-ft',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the copyright footer', 'thachpham' ),
                             // Can be set to false to allow any media type, or can also be set to any mime type.           
                         ),
                         array(
