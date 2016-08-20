@@ -55,7 +55,6 @@
                     'icon'   => '',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
-
                         array(
                             'id'       => 'header-top-left',
                             'type'     => 'textarea',
@@ -181,8 +180,8 @@
                         
                     )
                 );   
-
-                 $this->sections[] = array(
+                    //copyright
+                $this->sections[] = array(
                     'title'  => __( 'Copyright Footer', 'thachpham' ),
                     'desc'   => __( 'Change the text copyright in footer', 'thachpham' ),
                     'icon'   => '',
@@ -208,9 +207,28 @@
                         ),
                         
                     )
-                );   
-                    
-                
+                );    
+                //for change the opening time in contact page
+                  $this->sections[] = array(
+                    'title'  => __( 'Opening time', 'thachpham' ),
+                    'desc'   => __( 'Change the opening time', 'thachpham' ),
+                    'icon'   => '',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+                         array(
+                            'id'       => 'opening-title',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit or remove the opening time title', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                         array(
+                            'id'       => 'time',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit  the time details', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
+                    )
+                );  
                 $this->sections[] = array(
                     'title'  => __( 'Typography', 'thachpham' ),
                     'desc'   => __( 'All of typography settings.', 'thachpham' ),
@@ -232,8 +250,6 @@
                     )
                 );
             }
-            
-
             public function setHelpTabs() {
 
                 // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.

@@ -26,6 +26,9 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+li{
+	list-style-type: none;
+}
 #banners{
 	background-color: #f2f2f2;
 	.banner-item{
@@ -418,11 +421,11 @@ article.post_format-post-format-image{
 			.search-submit {
 				display: inline-block;
 				position: absolute;
-				right: -11px;
-		    	top: 53%;
+				right: -18px;
+		    	top: 55%;
 				border: none;
-				padding-top: 20px;
-				padding-bottom: 20px;
+				padding-top: 23px;
+				padding-bottom: 23px;
 				background-color: @color3;
 				color: #ffffff;
 				text-transform: uppercase;
@@ -478,11 +481,16 @@ article.post_format-post-format-image{
 	aside.widget.widget_recent_entries ul li {
 		padding-top: 5px;
 		padding-bottom: 5px;
+		list-style-type: inherit;
+		margin-left: 20px;
+		color: #dddddd;
+		font-size: 15px;
 	}
 }
 // css for pagination
 .pagination-page{
 	margin-top: 50px;
+	margin-bottom: 500px;
 }
 .pagination-page ul{
 	position: relative;
@@ -521,6 +529,7 @@ article.post_format-post-format-image{
  		}
  	}
 }
+
 // css for contact us page
 .p-title(){
 	font-size: 27px;
@@ -551,5 +560,42 @@ article.post_format-post-format-image{
 			padding-right: 20px;
 			font-size: 20px;
 		}
-	}		
+		ul.opening-it li{
+			.p();
+			color: #acb6ca;
+			padding: 3px 0 3px 0;
+			span.hour{
+				float: right;
+				margin-right: 25px;
+			}
+		}
+	}	
+}
+.ct-form{
+	.left-form input{
+		width: 90%;
+		height: 55px;
+		background-color: #f2f2f2;
+		color: @text-menu;
+		padding-left: 20px;
+		margin-bottom: 15px;
+	}
+	textarea.message{
+		width: 100%;
+		background-color: #f2f2f2;
+		color: @text-menu;
+		padding-left: 30px;
+		padding-top: 25px;
+	}
+	input.submit{
+		float: right;
+		margin-right: 0;
+		.button();
+		border: none;
+	}
+	span.des{
+		.p();
+		position: absolute;
+		margin-top: 40px;
+	}
 }
