@@ -6,6 +6,7 @@
  *
  * @package _s
  */
+global $tp_options;
 ?>
 	</div><!-- #content -->
 	
@@ -19,13 +20,11 @@
 						</a>
 						<p class="ft-des">
 							<?php 
-								global $tp_options;
 								echo  $tp_options['ft-description'] ;
 							?>
 						</p>
 						<p class="ft-social">
 							<?php 
-								global $tp_options;
 								echo  $tp_options['ft-social'] ;
 							?>
 						</p>
@@ -40,29 +39,29 @@
 
 					</div>
 					<div class="contact-ft">
-						<span>Contact Infor</span>
+						<span>
+							<?php 
+								echo  $tp_options['contact-title'] ;
+							?>
+						</span>
 						<div class="ct-ft-item">
 							<p>
-							<?php 
-								global $tp_options;
+							<?php
 								echo  $tp_options['location'] ;
 							?>
 							</p>
 							<p>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['phone'] ;
 								?>
 							</p>
 							<p>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['mail'] ;
 								?>
 							</p>
 							<p>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['www'] ;
 								?>
 							</p>
@@ -75,19 +74,16 @@
 			<div class="ft-below">
 					<div class="left-below-ft">
 						<?php 
-								global $tp_options;
 								echo  $tp_options['left-bl-ft'] ;
 						?>
 					</div>
 					<div class="middle-bl-ft">
 						<?php 
-								global $tp_options;
 								echo  $tp_options['middle-bl-ft'] ;
 							?>
 					</div>
 					<div class="copyright">
-						<?php 
-								global $tp_options;
+						<?php 								
 								echo  $tp_options['copyright-ft'] ;
 							?>
 					</div>

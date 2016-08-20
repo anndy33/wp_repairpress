@@ -6,6 +6,8 @@
  *
  * @package _s
  */
+global $tp_options;
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -24,7 +26,6 @@
 				<div class="col-md-6">
 					<div class="header-left-top">
 						<?php 
-							global $tp_options;
 							echo  $tp_options['header-top-left'] ;
 						?>
 					</div>
@@ -58,7 +59,6 @@
 							</div>
 							<span>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['live-help'] ;
 								?>
 							</span>
@@ -70,7 +70,6 @@
 							</div>
 							<span>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['open-time'] ;
 								?>
 							</span>
@@ -82,7 +81,6 @@
 							</div>
 							<span>
 								<?php 
-									global $tp_options;
 									echo  $tp_options['email'] ;
 								?>
 							</span>

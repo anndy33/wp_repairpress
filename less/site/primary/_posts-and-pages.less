@@ -397,7 +397,6 @@ article.post_format-post-format-image{
 }
 .sidebar{
 	margin-top: 60px;
-	margin-left: 20px;
 	h1.widget-title{
     	font-size: 27px;
     	font-family: "Roboto Bold";
@@ -411,7 +410,7 @@ article.post_format-post-format-image{
 			position: relative;
 			input.search-field{
 				padding: 20px 0 20px 10px;
-				width: 128%;
+				width: 100%;
 				position: absolute;
 				background-color: #f2f2f2;
 				border: 1px solid #e6e6e6;
@@ -419,7 +418,7 @@ article.post_format-post-format-image{
 			.search-submit {
 				display: inline-block;
 				position: absolute;
-				right: -60px;
+				right: -11px;
 		    	top: 53%;
 				border: none;
 				padding-top: 20px;
@@ -434,15 +433,11 @@ article.post_format-post-format-image{
 		}
 	}
 	aside.widget{
-		padding-right: 60px;
+		padding-right: 20px;
 		margin-top: 50px;
 	}
 	aside.widget ul{
 		margin-left: 0;
-	}
-	aside.widget ul li{
-		padding-top: 10px;
-		padding-bottom: 10px;
 	}
 	aside.widget.widget_text{
 		box-shadow: 1px 0px 2px 2px #eceef1;
@@ -459,6 +454,8 @@ article.post_format-post-format-image{
 	}
 	aside.widget.widget_categories ul li{
 		border-bottom: 1px solid #eceef1;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	aside.widget.widget_tag_cloud{
 		.tagcloud a{
@@ -469,13 +466,18 @@ article.post_format-post-format-image{
 			background-color: #eeeeee;
 			padding: 10px;
 			margin-right: 10px;
+			display: inline-block;
+			margin-bottom: 20px;
 		}
 	}
 	aside.widget.widget_recent_entries ul li a{
 		font-size: 14px;
 		font-family: "OpenSans";
 		color: @color3;
-
+	}
+	aside.widget.widget_recent_entries ul li {
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 // css for pagination
@@ -518,4 +520,36 @@ article.post_format-post-format-image{
  			color: #ffffff;
  		}
  	}
+}
+// css for contact us page
+.p-title(){
+	font-size: 27px;
+	font-family: "Roboto Bold";
+	color: #444444;
+	margin-top: 60px;
+}
+.contact-infor{
+	.ct-title{
+		.p-title();
+	}
+	.ct-infor-item{
+		margin-top: 30px;
+		box-shadow: 1px 0px 2px 2px #eceef1;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		p{	
+			.p();
+			color: #acb6ca;
+			padding-left: 25px;
+		}
+		p b{
+			color: #444444;
+			font-family: "Roboto Bold";
+		}
+		p i{
+			color: @color3;
+			padding-right: 20px;
+			font-size: 20px;
+		}
+	}		
 }

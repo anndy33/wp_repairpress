@@ -143,11 +143,17 @@
                 );
                 //option for change the contact infor in footer
                 $this->sections[] = array(
-                    'title'  => __( 'Contact Footer', 'thachpham' ),
+                    'title'  => __( 'Contact Infor', 'thachpham' ),
                     'desc'   => __( 'Change the contact content in footer', 'thachpham' ),
                     'icon'   => '',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
+                         array(
+                            'id'       => 'contact-title',
+                            'type'     => 'textarea',
+                            'title'    => __( 'Edit title for contact', 'thachpham' ),
+                            // Can be set to false to allow any media type, or can also be set to any mime type.           
+                        ),
                          array(
                             'id'       => 'location',
                             'type'     => 'textarea',
