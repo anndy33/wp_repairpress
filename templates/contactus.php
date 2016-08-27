@@ -83,8 +83,9 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="map">
-					
+				<div class="ct-map">
+					<span>Where you can find us</span>
+					 <iframe style="pointer-events: none;" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14896.6360948438!2d105.834901!3d21.02632215!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1468894804589" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 				<div class="ct-form">
 					<?php while ( have_posts() ) : the_post(); ?>	

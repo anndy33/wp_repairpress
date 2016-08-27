@@ -23,14 +23,14 @@ global $tp_options;
 	<div id="header-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="header-left-top">
 						<?php 
 							echo  $tp_options['header-top-left'] ;
 						?>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="header-right-top">
 						<?php wp_nav_menu( array( 'theme_location' => 'top-menu-right' ) ); ?>
 					</div>
@@ -41,7 +41,7 @@ global $tp_options;
 	<div id="header-middle">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="site-branding">
 						<h1 class="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -50,7 +50,7 @@ global $tp_options;
 						</h1>	
 					</div><!-- .site-branding -->
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-sm-12 col-xs-12">
 					<div class="header-infor">
 						<div class="hd-item">
 							<div class="hd-it-title">
@@ -86,7 +86,7 @@ global $tp_options;
 							</span>
 						</div>
 						<div class="hd-button">
-							<button>Request a  quote</button>
+							<button class="hvr-grow">Request a  quote</button>
 						</div>
 					</div>
 				</div>
@@ -96,9 +96,9 @@ global $tp_options;
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 col-sm-12 col-xs-12">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', '_s' ); ?></button>
+					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', '_s' ); ?><!-- <i class="fa fa-bars" aria-hidden="true"></i> --></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					<div class="hd-social">
 						<i class="fa fa-facebook-square" aria-hidden="true"></i>

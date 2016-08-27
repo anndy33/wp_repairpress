@@ -12,9 +12,7 @@ footer#colophon{
 		border-radius: 3px;
 	}
 	.ft-item{
-		display: flex;
 		.ft-left{
-			width: 40%;
 			p.ft-social{
 				font-size: 25px;
 				margin-top: 15px;
@@ -27,9 +25,7 @@ footer#colophon{
 				color: #acb6ca;
 			}
 		}
-		.menu-footer{
-			width: 15%;
-			margin-left: 50px;
+		.menu-footer{			
 			span{
 				.span-ft();
 			}
@@ -48,7 +44,6 @@ footer#colophon{
 			}
 		}
 		.services-ft{
-			width: 20%;
 			span{
 				.span-ft();
 			}
@@ -67,7 +62,7 @@ footer#colophon{
 			}
 		}
 		.contact-ft{
-			width: 25%;
+			
 			.ct-ft-item{
 				margin-top: 40px;
 			}
@@ -117,4 +112,19 @@ footer#colophon{
 	font-family: "Roboto Bold";
 	text-transform: uppercase;
 	color: #ffffff;
+}
+@media screen and(max-width: 1100px) {
+	footer#colophon .float-footer{
+		width: 95%;
+		box-shadow: none;
+	
+	}
+	
+}
+@media screen and (max-width: 768px) {
+	footer#colophon .float-footer{
+		width: 80%;
+		margin-left: 10%;
+	}
+	
 }

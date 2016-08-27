@@ -118,8 +118,8 @@ function _s_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-
 add_action( 'widgets_init', '_s_widgets_init' );
+
 /*
 @ Thiết lập hàm hiển thị logo
 @ thachpham_logo()
@@ -212,7 +212,7 @@ if( ! function_exists( 'ngothuong_entry_meta' ) ) {
           echo ' <span class="meta-reply">';
             comments_popup_link(
               __('Leave a comment', 'ngothuong'),
-              __('One comment', 'ngothuong'),
+              __('1 comment', 'ngothuong'),
               __('% comments', 'ngothuong'),
               __('Read all comments', 'ngothuong')
              );
@@ -354,16 +354,30 @@ function _s_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery') );
+    wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery') );
     wp_enqueue_script( 'bootstrap-js' );
+
     wp_register_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', array('jquery') );
     wp_enqueue_script( 'jquery-js' );
+
     wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap.min.css', 'all' );
     wp_enqueue_style( 'bootstrap-css' );
-    wp_register_script( 'materialize-js', get_template_directory_uri() . '/js/materialize.min.js', array('jquery') );
-    wp_enqueue_script( 'materialize-js' );
-     wp_register_style( 'materialize-css', get_template_directory_uri() . '/materialize.css', 'all' );
-    wp_enqueue_style( 'materialize-css' );
+
+    wp_register_style( 'owl-carousel-css', get_template_directory_uri() . '/owl.carousel.css', 'all' );
+    wp_enqueue_style( 'owl-carousel-css' );
+
+    wp_register_style( 'hover-css', get_template_directory_uri() . '/hover.css', 'all' );
+    wp_enqueue_style( 'hover-css' );
+
+    wp_register_script( 'owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery') );
+    wp_enqueue_script( 'owl-carousel-js' );
+
+    wp_register_style( 'owl-theme-css', get_template_directory_uri() . '/owl.theme.css', 'all' );
+    wp_enqueue_style( 'owl-theme-css' );
+
+    wp_register_style( 'owl-transitions-css', get_template_directory_uri() . '/owl.transitions.css', 'all' );
+    wp_enqueue_style( 'owl-transitions-css' );
+
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 //enqueues our locally supplied font awesome stylesheet
@@ -396,3 +410,213 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// shortcode for banner
+function create_shortcode_banner($args, $content) {
+        return'
+          <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="banner-item">
+            <span> '.$args['title'].' </span>
+            <p>'.$args['content'].'</p>
+            <i class="fa fa-'.$args['logo'].' aria-hidden="true"></i>
+          </div>
+        </div>
+        ';
+}
+add_shortcode( 'shortcode_banner', 'create_shortcode_banner' );
+//shortcode for first row
+function create_shortcode_firstrow($args, $content) {
+        return'
+          <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="ft-row-item">
+            <img src="'.$args['image'].'" alt="">
+            <span>'.$args['title'].'</span>
+            <p>'.$args['content'].'</p>
+            <a href="#">Readmore<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        ';
+}
+add_shortcode( 'shortcode_firstrow', 'create_shortcode_firstrow' );
+
+function create_shortcode_lastrow($args, $content){
+  return'
+    <li><i class="fa fa-'.$args['logo-name'].'" aria-hidden="true"></i>'.$args['content'].'</li>
+  ';
+}
+add_shortcode( 'shortcode_lastrow', 'create_shortcode_lastrow' );
+
+function create_shortcode_secondrow($args, $content) {
+        return'
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="sd-row-item">
+              <i class="fa fa-'.$args['logo-name'].'" aria-hidden="true"></i>
+              <span>'.$args['title'].'</span>
+              <p>'.$args['content'].'</p>
+              <h1>'.$args['no'].'.</h1>
+            </div>
+          </div>
+        ';
+}
+add_shortcode( 'shortcode_secondrow', 'create_shortcode_secondrow' );
+
+function create_shortcode_thirdrow($args, $content) {
+        return'
+         <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="td-item">
+            <div class="td-it-title">
+                <i class="fa fa-'.$args['logo-name'].'" aria-hidden="true"></i>
+                <span>'.$args['title'].'</span>
+            </div>
+            <p>'.$args['content'].'</p>
+          </div>
+        </div>
+        ';
+}
+add_shortcode( 'shortcode_thirdrow', 'create_shortcode_thirdrow' );
+
+function create_shortcode_aboutus($args, $content) {
+        return'
+           <div class="img-it">
+              <img src="'.$args['image'].'" alt="">
+              <img src="'.$args['image-1'].'" alt="">
+            </div>  
+            <div class="it-content">
+              <p>
+                '.$args['content'].'
+              </p>
+              <a href="#">readmore<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            </div>  
+        ';
+}
+add_shortcode( 'shortcode_aboutus', 'create_shortcode_aboutus' );
+
+function create_shortcode_accordion($args, $content) {
+        return'
+           <button class="accordion hvr-grow-shadow"><h3>'.$args['title'].'</h3></button>
+            <div class="panel">
+              <p>'.$args['content'].'<br><br>
+              </p>
+              <a href="#">readmore<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            </div>
+        ';
+}
+add_shortcode( 'shortcode_accordion', 'create_shortcode_accordion' );
+
+function create_shortcode_gallery($args, $content) {
+        return'
+            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="gallery-img">
+              <img src="'.$args['image'].'" alt="">
+              <img src="'.$args['image-1'].'" alt="">
+            </div>
+            <div class="ga-title-it">
+              <span>'.$args['title'].'</span>
+            </div>
+          </div>
+        ';
+}
+add_shortcode( 'shortcode_gallery', 'create_shortcode_gallery' );
+
+function create_shortcode_testimonial($args, $content) {
+        return'
+            <div class="test-item">
+                <div class="test-item-inner">
+                  <p>'.$args['content'].'</p>
+                </div>
+                <div class="author-item">
+                  <h4>'.$args['author'].'</h4>               
+                </div>      
+              </div>
+        ';
+}
+add_shortcode( 'shortcode_testimonial', 'create_shortcode_testimonial' );
+
+function create_shortcode_partner($args, $content) {
+        return'
+              <img src="'.$args['image'].'" alt="" />
+
+        ';
+}
+add_shortcode( 'shortcode_partner', 'create_shortcode_partner' );
+function create_shortcode_sell($args, $content) {
+        return'
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <h1>'.$args['title'].'?</h1>
+            <p>'.$args['content'].'</p>
+          
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <button class="hvr-float-shadow">'.$args['button-title'].'</button>
+          </div>
+             
+        ';
+}
+add_shortcode( 'shortcode_sell', 'create_shortcode_sell' );
+
+function create_shortcode_counter($args, $content) {
+        return'
+          <div class="col-md-3">
+            <div class="counter-it ">
+              <span class="count">'.$args['number'].'</span>
+              <p>'.$args['content'].'</p>
+            </div>      
+          </div>
+        ';
+}
+add_shortcode( 'shortcode_counter', 'create_shortcode_counter' );
+function create_shortcode_latestnew($args, $content) {
+        return'
+         <img src="'.$args['image'].'" alt="">
+        ';
+}
+add_shortcode( 'shortcode_latestnew', 'create_shortcode_latestnew' );
+function create_shortcode_carousel_active($args, $content) {
+        return'
+           <div class="item active">
+            <img src="'.$args['image'].'" alt="">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="carousel-caption">
+                    <h2>'.$args['title'].'<br>
+                    <span>'.$args['sub-title'].'</span>
+                    </h2>
+                      <p class="para">
+                       '.$args['content'].'
+                      </p>
+                     <button class="hvr-grow-shadow">'.$args['button-1'].'</button>
+                      <button class="bt hvr-grow-shadow">'.$args['button-2'].'</button>                           
+                    </div>
+                </div>  
+              </div>  
+            </div>
+          </div>
+        ';
+}
+add_shortcode( 'shortcode_carousel_active', 'create_shortcode_carousel_active' );
+function create_shortcode_carousel($args, $content) {
+        return'
+           <div class="item">
+            <img src="'.$args['image'].'" alt="">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="carousel-caption">
+                    <h2>'.$args['title'].'<br>
+                    <span>'.$args['sub-title'].'</span>
+                    </h2>
+                      <p class="para">
+                       '.$args['content'].'
+                      </p>
+                     <button class="hvr-grow-shadow">'.$args['button-1'].'</button>
+                      <button class="bt hvr-grow-shadow">'.$args['button-2'].'</button>                      
+                    </div>
+                </div>  
+              </div>  
+            </div>
+          </div>
+        ';
+}
+add_shortcode( 'shortcode_carousel', 'create_shortcode_carousel' );
+

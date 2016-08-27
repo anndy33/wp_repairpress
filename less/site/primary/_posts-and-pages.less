@@ -29,13 +29,17 @@
 li{
 	list-style-type: none;
 }
+
 #banners{
 	background-color: #f2f2f2;
+	margin-top: -60px;
 	.banner-item{
 		position: relative;
-		padding-top: 20px;
+		padding-top: 45px;
+		padding-bottom: 30px;
 		font-size: 14px;
 		color: @text-menu;
+		border-right: 1px solid #e4e4e4;
 		span{
 			font-family: "Roboto Bold";	
 			text-transform: uppercase;
@@ -44,7 +48,7 @@ li{
 			float: right;
 			position: absolute;
 			right: 20px;
-			top: 20px;
+			top: 45px;
 			font-size: 35px;
 		}
 	}
@@ -55,6 +59,8 @@ li{
 	.ft-row-item{
 		img{
 			margin-bottom: 30px;
+			height: 170px;
+			width: 100%;
 		}
 		span{
 			font-size: 16px;
@@ -71,7 +77,7 @@ li{
 	}
 	.ft-row-last{
 		ul{
-			border-bottom: 1px solid;
+			border-bottom: 1px solid #e4e4e4;
 		}
 		li{
 			font-size: 14px;
@@ -79,10 +85,11 @@ li{
 			text-transform: uppercase;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			border-top: 1px solid;
+			border-top: 1px solid #e4e4e4;
 			
 			i{
 				padding-right: 20px;
+				color: #bbbbbb;
 			}
 		}
 	}
@@ -101,10 +108,20 @@ li{
 		color: #ffffff;
 		position: relative;
 		padding-left: 20px;
-		border-top: 1px solid #4d4d4d;
-		border-bottom: 1px solid #4d4d4d;
+		border: 1px solid #4d4d4d;
+		height: 250px;
 		margin-top: 65px;
 		margin-right: 30px;
+		width: 100%;
+		padding-top: 20px;
+		&:hover{
+			box-shadow: 1px 0px 2px 2px #393939;
+			background-color: #444444;
+			border: none;
+			h1{
+				color: @color3;
+			}
+		}
 		span{
 			font-size: 16px;
 			font-family: "Roboto Bold";
@@ -113,37 +130,43 @@ li{
 			position: absolute;
 			margin-top: 5px;
 			margin-left: 10px;
-			padding-top: 30px;
+			
 		}
 		i{
 			font-size: 35px;
 			color: #ffffff;
-			padding-top: 30px;
+			
 		}
 
 		p{
 			.p();
-			margin-top: 30px;
+			margin-top: 10px;
 			color: #8f8f8f;
 		}
 		h1{
 			color: #4d4d4d;
+			font-size: 60px;
+			font-family: "Roboto Bold";
+			position: absolute;
 		}
 	}
 }
 #third-row{
-	padding-top: 60px;
+	padding-top: 70px;
 	padding-bottom: 60px;	
 	.td-item{
-		margin-top: 50px;
-		i{
+		margin-bottom: 40px;
+		.td-it-title{
+			display: flex;
+			i{
 			font-size: 35px;
 			margin-right: 20px;
 			color: @color3;
-		}
-		span{
-			font-size: 24px;
-			font-family: "Roboto Regular";
+			}
+			span{
+				font-size: 24px;
+				font-family: "Roboto Regular";
+			}
 		}
 		p{
 			.p();
@@ -157,7 +180,7 @@ li{
 	background-color: #2b4c80;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	position: relative;	
+
 	h1{
 		font-size: 24px;
 		font-family: "Roboto Bold";	
@@ -171,10 +194,10 @@ li{
 		padding: 20px;
 		float: 	right;	
 		right: 	0;
-		top: 	40px;
 		background: none  !important;
 		box-shadow: none;
-		position: 	absolute;
+		margin-top: 15px;
+	
 	}
 }
 #latest-new{
@@ -190,6 +213,10 @@ li{
 		margin-top: 30px;
 		position: relative;
 		background-color: #ffffff;
+		img{
+			height: 167px;
+			width: 270px;
+		}
 		.new-it-heading{
 			margin-left: 300px;
 
@@ -198,16 +225,17 @@ li{
 			font-family: "Roboto Bold";
 			font-size: 16px; 
 			text-transform: uppercase;
-			margin-top: -160px;	
+			margin-top: -140px;	
 			position: absolute;
+			a{
+				color: #000;
+			}
 		}
 		.new-it-heading span{
 			font-family: "OpenSans";
 			font-size: 14px;
-			margin-top: -25px;
+			margin-top: -35px;
 			position: absolute;
-
-
 		}
 	}
 }
@@ -228,6 +256,8 @@ li{
 			margin-bottom: 50px;
 			img{
 				margin-right: 15px;
+				width: 50%;
+				height: 165px;
 			}
 		}
 		.it-content p{
@@ -240,6 +270,7 @@ li{
 	.accordion-item{
 			margin-left: 15px;
 			display: block;
+			box-shadow: 1px 0px 2px 2px #eceef1;
 			button.accordion{
 			    cursor: pointer;
 			    width: 100%;
@@ -249,12 +280,17 @@ li{
 			    font-size: 20px;
 			    transition: 0.4s;
 			    position: relative;
+			    background: none;
+			    box-shadow: none;
+			    padding-top: 20px;
+			    padding-bottom: 20px;
+			    border-bottom: 1px solid #eeeeee;
 			    h3{
 			    	.readmore();
 			    	margin-left: 50px;
 			    	color: #000;
 			    	position: absolute;
-			    	margin-top: 5px;
+			    	margin-top: 8px;
 			    }
 			}
 			button.accordion.active{
@@ -284,9 +320,12 @@ li{
 				    p{
 				    	.p();
 				    	margin-top: 30px;
+				    	padding-left: 70px;
+				    	padding-right: 50px;
 				    }
 				    a{
 				    	.readmore();
+				    	padding-left: 70px;
 				    }
 				}
 				div.panel.show {
@@ -294,7 +333,125 @@ li{
 				    max-height: 500px;  
 				}
 			}
+}
+#gallery-it{
+	padding: 50px 0 50px 0;
+	.galley-title span{
+		.title();
 	}
+	.gallery-img{
+		display: flex;
+		margin-top: 50px;
+		margin-bottom: 25px;
+		img{
+			margin-right: 5px;
+			width: 50%;
+			height: 175px;
+		}
+	}
+	.ga-title-it span{		
+		font-family: "Roboto Bold";
+		font-size: 16px; 
+		text-transform: uppercase;
+	}
+}
+#testimonial{
+	margin-bottom: 50px;
+	background: url('./images/test-bg.png')  no-repeat;
+	padding: 50px 0 50px 0;
+	.customNavigation{
+		position: relative;
+		z-index: 1;
+		a.btn{
+			width: 58px;
+			height: 228px;
+			background-color: @color3;
+		}
+		i{
+			font-size: 25px;
+			color: #ffffff;
+			padding-top: 105px;		 
+		}
+		a.btn.prev{
+			position: absolute;
+		    float: left;
+		    left: 15px;
+		  	top: 8px; 	
+		}
+		a.btn.next{
+			position: absolute;
+			float: right;
+			right: 13px;
+			top: 8px;
+
+		}
+	}
+	.owl-pagination {
+   		 display: none;
+	}
+	
+	.test-heading{
+		position: relative;
+		text-align: center;
+		span{
+			.title();
+		}
+	}
+	.test-item {
+	    width: 85%;
+	    background: url('./images/quote-bg.png') no-repeat;
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	    padding-left: 150px;
+	    padding-right: 150px;
+	    margin-left: 7%;
+	    .test-item-inner p{
+	    	.p();
+	    	text-align: center;
+	    }
+	    .author-item h4{
+	    	text-align: center;
+	    	font-size: 16px;
+	    	font-family: "Roboto Bold";
+	    	text-transform: uppercase;
+	    	margin-top: 50px;
+	    }
+	}
+}
+#partner{
+	padding: 50px 0 50px 0;
+	.partner-title{
+		.title();
+		text-align: left;
+		margin-bottom: 50px;
+	}
+	.partner-it{
+		img{
+			opacity: 0.5;
+			width: 210px;
+			height: 125px;
+			margin-right: 10px;
+			box-shadow: 1px 0px 2px 2px #eceef1;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+#counter{
+	padding: 50px 0 50px 0;
+	background-color: #f2f2f2;
+	.counter-it{
+		text-align: center;
+		span{
+			font-size: 59pt;
+			font-family: "Roboto Bold";
+		}
+		p{
+			.p();
+		}
+	}
+}
 // css for title
 .title(){
 	font-size: 36px;
@@ -337,7 +494,6 @@ article.post_format-post-format-image{
 	.entry-thumbnail figure.post-thumbnail{
 		img{
 			width: 100%;
-
 		}
 	}
 	header.entry-header{
@@ -345,7 +501,7 @@ article.post_format-post-format-image{
 		position: relative;
 		span.date-published{
 			position: absolute;
-			margin-top: 40px;
+			margin-top: 25px;
 			float: left;
 			left: 50px;
 			font-size: 25px;
@@ -359,7 +515,7 @@ article.post_format-post-format-image{
 		}
 		span.date-published-1{
 			position: absolute;
-			margin-top: 60px;
+			margin-top: 45px;
 			float: left;
 			left: 50px;
 			font-size: 15px;
@@ -544,8 +700,8 @@ article.post_format-post-format-image{
 	.ct-infor-item{
 		margin-top: 30px;
 		box-shadow: 1px 0px 2px 2px #eceef1;
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		p{	
 			.p();
 			color: #acb6ca;
@@ -569,16 +725,21 @@ article.post_format-post-format-image{
 				margin-right: 25px;
 			}
 		}
+		li.time b{
+			font-family: "Roboto Bold";
+			color: #000;
+		}
 	}	
 }
 .ct-form{
+	margin-bottom: 500px;
 	.left-form input{
 		width: 90%;
 		height: 55px;
 		background-color: #f2f2f2;
 		color: @text-menu;
 		padding-left: 20px;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
 	}
 	textarea.message{
 		width: 100%;
@@ -596,6 +757,141 @@ article.post_format-post-format-image{
 	span.des{
 		.p();
 		position: absolute;
-		margin-top: 40px;
+		margin-top: 28px;
 	}
+}
+.ct-map{
+	padding-top: 60px;
+	margin-bottom: 120px;
+	span{
+		.p-title();
+	}
+	iframe{
+		margin-top: 30px;
+
+	}
+}
+//css for single post comment
+#comments{
+	h2.comments-title{
+		font-size: 27px;
+		font-family: "Roboto Bold";
+	}
+	ol.comment-list {
+  	 	margin-left: 0;
+	}
+	article.comment-body{
+		width: 80%;
+		background-color: #f2f2f2;
+		footer.comment-meta{
+			padding-top: 30px;
+			padding-left: 30px;
+			padding-bottom: 20px;
+			position: relative;
+			img.avatar, span{
+				height: 60px;
+				width: 60px;
+			}
+			b.fn{
+				color: @color3;
+				font-size: 21px;
+				font-family: "Roboto Bold";
+				text-transform: capitalize;
+			}
+			span.says{
+				display: none;
+			}
+			.comment-metadata {
+				position: absolute;
+				float: right;
+				right: 100px;
+				top: 40px;
+			}
+				.comment-metadata a{
+					.p();
+				}
+		}
+		.reply a{
+			font-size: 14px;
+			color: @color3;
+		}
+		.comment-content {
+			padding-top: 20px;
+			padding-left: 30px;
+			padding-bottom: 30px;
+			padding-right: 50px;
+			p{
+				.p();
+				overflow: hidden;
+			}
+		}
+	}
+}
+nav.navigation.post-navigation {
+    display: none;
+}
+//css for the comment form
+#respond.comment-respond{
+	margin-top: 100px;
+	padding-bottom: 800px;
+	margin-bottom: 100px;
+	h3#reply-title{
+		font-size: 27px;
+		font-family: "Roboto Bold";
+	}
+	form#commentform{
+		
+		input#author, input#email, input#website {
+			height: 60px;
+			padding-left: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #e6e6e6;
+			margin-top: 20px;
+		}
+		textarea#comment{
+			padding-left: 20px;
+			padding-top: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #e6e6e6;
+			
+			
+		}
+		input#submit {
+			.button();
+			float: left;
+			left: 0;
+			margin-top: 20px;
+		}
+	}
+}
+//responsive
+@media screen and (max-width: 1024px) and (min-width: 981px){
+	
+}
+@media screen and (max-width: 980px) and (min-width: 769px){
+	#testimonial .test-item .author-item h4{
+		margin-top: 0;
+	}
+	#testimonial .test-item{
+		padding-top: 20px;
+		padding-bottom: 100px;
+	}
+}
+@media screen and (max-width: 768px) and (min-width: 481px){
+	#testimonial .test-item .author-item h4{
+		margin-top: 0;
+	}
+	#testimonial .test-item{
+		padding: 0;
+		width: 90%;
+		padding-bottom: 100px;
+		padding-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+}
+@media screen and (max-width:480px){
+	
+	
 }

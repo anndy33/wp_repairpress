@@ -66,17 +66,82 @@
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width: 768px) and (max-width: 991px){
+		#header-middle .logo{
+			margin-left: 35%;
+		}
+		.header-infor{
+			margin-top: 50px;
+			float: left !important;
+		}
+		#header-top .header-left-top{
+			display: none;
+		}
+		
+}
+@media (min-width: 320px) and (max-width: 998px){
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: block;
+		display: block;	
+		ul#menu-primary-menu{
+			display: flex;
+			flex-direction: column;
+		}	
 	}
-
-	.main-navigation ul {
+	.main-navigation ul{
 		display: none;
 	}
-}
+	.hd-social{
+		display: none;
+	}
+	nav#site-navigation {
+   		background: none !important;
+	}
+	#myCarousel{
+		top: 0 !important;
+	}
+	header#masthead nav#site-navigation{
+		height: auto !important;
+		position: static !important;
+	
 
+	}
+	.main-navigation li{
+		float: none;
+	}
+	header#masthead nav#site-navigation li#menu-item-1501 a{
+		margin-left: 0 !important;
+	}
+	header#masthead{
+		background-color: @color2 !important;
+
+	}
+	#banners{
+		margin-top: 0 !important;
+	}
+	
+}
+@media screen and(max-width: 760px) {
+	#header-middle .logo{
+			margin-left: 35%;
+		}
+		.header-infor{
+			margin-top: 50px;
+			float: left !important;
+		}
+		#header-top .header-left-top{
+			display: none;
+		}
+}
+@media screen and(min-width: 320px) and(max-width: 759px){
+	#header-middle .header-infor{
+		display: none !important;
+	}
+	#myCarousel a.left.carousel-control, #myCarousel a.right.carousel-control{
+		display: none;
+	}
+
+}
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -172,12 +237,13 @@
 			border: none !important;
 		}
 		.hd-button button{
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 14px;
+			padding-bottom: 14px;
 			font-size: 14px;
 			font-family: "Roboto Bold";
 			text-transform: uppercase;
 			color: @text-menu;
+			background-color: #ffffff;
 		}
 	}
 }
@@ -195,9 +261,9 @@ header#masthead{
 		ul#menu-primary-menu li{
 			margin-right: 50px;
 			padding-top: 30px;
-			padding-bottom: 30px;
+			padding-bottom: 26px;
 			&:hover{
-				border-bottom: 3px solid #666666;
+				border-bottom: 4px solid #666666;
 				a{
 					color: #666666;
 				}
@@ -207,10 +273,10 @@ header#masthead{
 			text-decoration: none;
 		}
 
-		li#menu-item-33 span{
+		li#menu-item-1501 span{
 			display: none;
 		}
-		li#menu-item-33{
+		li#menu-item-1501{
 			border-bottom: none !important;
 			padding-top: 0 !important;
 			padding-bottom: 0 !important;
@@ -221,7 +287,7 @@ header#masthead{
 				i{
 					font-size: 35px;
 					padding-top: 15px;
-					padding-bottom: 15px;
+					padding-bottom: 10px;
 					padding-left: 10px;
 					color: @text-menu;
 				}
@@ -239,60 +305,100 @@ header#masthead{
 			margin-top: 25px;
 			margin-right: 20px;
 			color: @text-menu;
-			
+			i:hover{
+				color: @color3;
+			}
 		}
+
 	}
 	
 }
-header#masthead::after{
-		content: "";
-		position: absolute;
-		width: 7%;
-		height: 90px;
-		float: right;
-		right: 0px;
-		margin-top:-106px;
-		background-color: #ffffff;
-		z-index: 1;
-}	
-.carousel.carousel-slider {
-    top: -60px !important;
-    left: 0;
-    height: 560px !important;
-    .waves-effect{
-		float: left;
-		margin-right: 10px;
-		font-family: "Roboto Bold";
-    	font-size: 14px;
-    }
-    .waves-effect.request{
-    	background: @color3 !important;
-    	color: #ffffff !important;
-    }
-}
-.white-text{
-	padding-top: 130px;
-	padding-bottom: 30px;
-	h2, span, p{
-		float: left;
-		left: 0;
-		color: @color-text-title;
-	}
-	h2{
-		font-size: 48px !important;
-		font-family: "Roboto Thin" !important;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		span{
-			font-family: "Roboto Bold" !important;
+// header#masthead::after{
+// 		content: "";
+// 		position: absolute;
+// 		width: 7%;
+// 		height: 90px;
+// 		float: right;
+// 		right: 0px;
+// 		margin-top:-106px;
+// 		background-color: #ffffff;
+// 		z-index: 1;
+// }	
+//css for carousel boostrap
+#myCarousel{
+	top: -60px;
+		.carousel-inner > .item > img,
+		.carousel-inner > .item > a > img {
+			width: 100%;
+			height: 560px;
 		}
+	.carousel-control.left, .carousel-control.right{
+		background-image: none;
+		opacity: 1;
 	}
-	p.para{
-		color: @color-text-title !important;
+	.carousel-control:hover{
+
+	}
+	a.left.carousel-control, a.right.carousel-control {
+		    top: 50%;
+		    i{
+		    	padding-top: 15px;
+		    	padding-bottom: 15px;
+		    	padding-right: 20px;
+		    	padding-left: 20px;
+		    	background-color: #ffffff;
+		    	color: grey;
+		    }
+	}
+	a.left.carousel-control i{
+		margin-left: -65%;
+	}
+	a.right.carousel-control i{
+		margin-right: -65%;
+	}
+	.carousel-caption {
+	    position: absolute;
+	    left: 0;
+	  	top: -450px;
+	    bottom: 20px;
+	    z-index: 10;
+	    padding-bottom: 20px;
+	    color: #fff;
+	    text-align: left;
+
+	}
+	.carousel-caption h2{
+		font-family: "Roboto Thin";
+		color: #3d3d3d;
+	    font-size: 48px;
+
+	}
+	.carousel-caption h2 span{
+		font-family: "Roboto Bold";
+	}
+	.carousel-caption p{
+		margin-top: 35px;
 		font-size: 16px;
-		float: left;
-		left: 0;
+		font-family: "OpenSans";
+		color: #7d7d7d;
+	}	
+	.carousel-caption button{
+		margin-top: 30px;
+		margin-right: 10px;
+	    font-size: 14px;
+	    text-transform: uppercase;
+	    padding: 20px;
+	    color: #fff;
+	    background-color: @color3;    
+	    font-family: "Roboto Bold";
+	    box-shadow: none;
+	    border: none;
 	}
+	.carousel-caption button.bt{
+		background-color: white;
+		color: grey;
+	}
+	
 }
 .page-title{
 	background-color: #f2f2f2;

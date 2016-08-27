@@ -4,7 +4,6 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
 				<!--this class help image is displayed-->
 					<?php if ( 'post' == get_post_type() ) : ?>
 							<!-- display thumbnail -->
@@ -22,6 +21,5 @@
 					<?php endif; ?>
 					<div class="entry-content">
 						<?php ngothuong_entry_content(); ?>
-					</div><!-- .entry-content -->			
-			
+					</div><!-- .entry-content -->				
 </article><!-- #post-## -->
