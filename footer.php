@@ -49,7 +49,7 @@ global $tp_options;
 							<div class="contact-ft">
 								<span>
 									<?php 
-										echo  $tp_options['contact-title'] ;
+										echo $tp_options['contact-title'] ;
 									?>
 								</span>
 								<div class="ct-ft-item">
