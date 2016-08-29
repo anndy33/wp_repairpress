@@ -82,21 +82,31 @@ global $tp_options;
 		</div>
 		<div class="container">
 			<div class="ft-below">
-					<div class="left-below-ft">
-						<?php 
-								echo  $tp_options['left-bl-ft'] ;
-						?>
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-12">	
+								<div class="left-below-ft">
+									<?php 
+											echo  $tp_options['left-bl-ft'] ;
+									?>
+								</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="middle-bl-ft">
+								<?php 
+										echo  $tp_options['middle-bl-ft'] ;
+									?>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-4 col-xs-12">	
+							<div class="copyright">
+								<?php 								
+										echo  $tp_options['copyright-ft'] ;
+									?>
+							</div>
+						</div>
 					</div>
-					<div class="middle-bl-ft">
-						<?php 
-								echo  $tp_options['middle-bl-ft'] ;
-							?>
-					</div>
-					<div class="copyright">
-						<?php 								
-								echo  $tp_options['copyright-ft'] ;
-							?>
-					</div>
+					
+					
 				</div>
 		</div>
 	</footer><!-- #colophon -->

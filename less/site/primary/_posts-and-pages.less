@@ -215,18 +215,18 @@ li{
 		background-color: #ffffff;
 		img{
 			height: 167px;
-			width: 270px;
+			width: 100%;
+			height: auto;	
 		}
 		.new-it-heading{
-			margin-left: 300px;
+			// margin-left: 300px;
 
 		}
 		.new-it-heading h2{
 			font-family: "Roboto Bold";
 			font-size: 16px; 
 			text-transform: uppercase;
-			margin-top: -140px;	
-			position: absolute;
+			margin-bottom: 	90px;
 			a{
 				color: #000;
 			}
@@ -234,8 +234,6 @@ li{
 		.new-it-heading span{
 			font-family: "OpenSans";
 			font-size: 14px;
-			margin-top: -35px;
-			position: absolute;
 		}
 	}
 }
@@ -258,6 +256,8 @@ li{
 				margin-right: 15px;
 				width: 50%;
 				height: 165px;
+				
+
 			}
 		}
 		.it-content p{
@@ -347,6 +347,7 @@ li{
 			margin-right: 5px;
 			width: 50%;
 			height: 175px;
+			
 		}
 	}
 	.ga-title-it span{		
@@ -430,6 +431,7 @@ li{
 			opacity: 0.5;
 			width: 210px;
 			height: 125px;
+			
 			margin-right: 10px;
 			box-shadow: 1px 0px 2px 2px #eceef1;
 			&:hover{
@@ -865,9 +867,6 @@ nav.navigation.post-navigation {
 	}
 }
 //responsive
-@media screen and (max-width: 1024px) and (min-width: 981px){
-	
-}
 @media screen and (max-width: 980px) and (min-width: 769px){
 	#testimonial .test-item .author-item h4{
 		margin-top: 0;
@@ -889,9 +888,54 @@ nav.navigation.post-navigation {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	
+	#first-row .ft-row-last ul{
+		margin-left: 0 !important;
+	}
+	#first-row .ft-row-item{
+		margin-bottom: 50px !important;
+	}
+	#first-row .ft-row-item img{
+			height: auto !important;
+	}
 }
-@media screen and (max-width:480px){
-	
-	
+@media screen and (min-width: 270px) and(max-width: 480px) {
+	#first-row .ft-row-last ul{
+		margin-left: 0 !important;
+	}
+	#first-row .ft-row-item{
+		margin-bottom: 50px !important;
+	}
+	#latest-new .new-item .new-it-heading h2 {
+		margin-bottom: 30px !important;
+	}
+	#aboutus .accordion-item{
+		margin-left: 0;
+		width: 100%;
+	}
+	#testimonial .test-item{
+		padding: 0px !important;
+	}
+	#testimonial .test-item .author-item h4{
+		display: none;
+
+	}
+	#testimonial .test-item .test-item-inner p{
+		padding-left: 20px;
+		overflow: 	hidden !important;
+	}
+	#testimonial .customNavigation a.btn{
+		display: none;
+	}
+	#sell button{
+		float: left;
+		left: 0;
+	}
+	#latest-new button{
+		float: left;
+		left: 0;
+	}
+	#aboutus .accordion-item div.panel p{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

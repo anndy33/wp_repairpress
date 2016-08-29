@@ -428,12 +428,12 @@ add_shortcode( 'shortcode_banner', 'create_shortcode_banner' );
 function create_shortcode_firstrow($args, $content) {
         return'
           <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="ft-row-item">
-            <img src="'.$args['image'].'" alt="">
-            <span>'.$args['title'].'</span>
-            <p>'.$args['content'].'</p>
-            <a href="#">Readmore<i class="fa fa-caret-right" aria-hidden="true"></i></a>
-          </div>
+            <div class="ft-row-item">
+              <img src="'.$args['image'].'" alt="">
+              <span>'.$args['title'].'</span>
+              <p>'.$args['content'].'</p>
+              <a href="#">Readmore<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            </div>
         </div>
         ';
 }
@@ -448,7 +448,7 @@ add_shortcode( 'shortcode_lastrow', 'create_shortcode_lastrow' );
 
 function create_shortcode_secondrow($args, $content) {
         return'
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="sd-row-item">
               <i class="fa fa-'.$args['logo-name'].'" aria-hidden="true"></i>
               <span>'.$args['title'].'</span>
@@ -493,7 +493,7 @@ add_shortcode( 'shortcode_aboutus', 'create_shortcode_aboutus' );
 
 function create_shortcode_accordion($args, $content) {
         return'
-           <button class="accordion hvr-grow-shadow"><h3>'.$args['title'].'</h3></button>
+           <button class="accordion"><h3>'.$args['title'].'</h3></button>
             <div class="panel">
               <p>'.$args['content'].'<br><br>
               </p>

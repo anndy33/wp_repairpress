@@ -72,7 +72,7 @@ get_header(); ?>
 				<?php echo do_shortcode('[shortcode_firstrow image="https://thumbs.dreamstime.com/x/repair-adjustment-electronic-device-38949031.jpg" title="Water damage repair" content="We offer free postage with all mobile phone & tablet repairs. Saving time and money. Just print the label and send."]') ?>
 				<?php echo do_shortcode('[shortcode_firstrow image="https://demo.proteusthemes.com/repairpress/wp-content/uploads/sites/27/2015/09/blog-8.jpg" title="Water damage repair" content="We offer free postage with all mobile phone & tablet repairs. Saving time and money. Just print the label and send."]') ?>
 				<?php echo do_shortcode('[shortcode_firstrow image="https://demo.proteusthemes.com/repairpress/wp-content/uploads/sites/27/2015/09/blog-41.jpg" title="Water damage repair" content="We offer free postage with all mobile phone & tablet repairs. Saving time and money. Just print the label and send."]') ?>
-				<div class="col-md-3 col-sm-3 col-sx-6">
+				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="ft-row-last">
 						<ul>
 							<?php echo do_shortcode('[shortcode_lastrow logo-name="laptop" content="MAC & pc repair" ]') ?>
@@ -135,13 +135,19 @@ get_header(); ?>
 					foreach( $recent_posts as $recent ){
 						echo '<div class="col-md-6 col-sm-12 col-xs-12">';
 							echo '<div class="new-item">';
-								echo do_shortcode('[shortcode_latestnew image="https://thumbs.dreamstime.com/x/repair-adjustment-electronic-device-38949031.jpg"]');
-								echo '<div class="new-it-heading">';
-									echo '<h2><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </h2> ';
-									echo'<span>';
-										echo date( 'F j,Y', strtotime( $recent['post_date'] ) );
-									echo '</span>';
-								echo '</div>';
+								echo'<div class="row">';
+										echo'<div class="col-md-6 col-sm-6 col-xs-12">';
+											echo do_shortcode('[shortcode_latestnew image="https://thumbs.dreamstime.com/x/repair-adjustment-electronic-device-38949031.jpg"]');
+										echo'</div>';
+										echo'<div class="col-md-6 col-sm-6 col-xs-12">';
+													echo '<div class="new-it-heading">';
+													echo '<h2><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </h2> ';
+													echo'<span>';
+														echo date( 'F j,Y', strtotime( $recent['post_date'] ) );
+													echo '</span>';
+													echo '</div>';
+										echo'</div>';			
+								echo'</div>';			
 							echo '</div>';
 						echo '</div>';
 						}

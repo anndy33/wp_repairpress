@@ -62,7 +62,7 @@ gulp.task('build-css', function () {
                 ],
             cascade: false
         }))
-        .pipe(plugins.cssmin())
+      
         .pipe(gulp.dest('./')).on('error', gutil.log);
 });
 

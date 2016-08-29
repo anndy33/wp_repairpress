@@ -98,7 +98,7 @@ global $tp_options;
 			<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', '_s' ); ?><!-- <i class="fa fa-bars" aria-hidden="true"></i> --></button>
+					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( '', '_s' ); ?><i class="fa fa-bars" aria-hidden="true"></i></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					<div class="hd-social">
 						<i class="fa fa-facebook-square" aria-hidden="true"></i>
