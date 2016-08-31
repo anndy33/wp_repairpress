@@ -424,6 +424,7 @@ function create_shortcode_banner($args, $content) {
         ';
 }
 add_shortcode( 'shortcode_banner', 'create_shortcode_banner' );
+
 //shortcode for first row
 function create_shortcode_firstrow($args, $content) {
         return'
@@ -619,6 +620,7 @@ function create_shortcode_carousel($args, $content) {
         ';
 }
 add_shortcode( 'shortcode_carousel', 'create_shortcode_carousel' );
+
 //shortcode for about page
 //shortcode define row
 add_shortcode('row', function($atts){
@@ -658,7 +660,7 @@ add_shortcode('about_heading', function($atts){
     'heading'=>''
     ), $atts);
   return'
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="ab-heading">
             <h3>'.$atts['heading'].'</h3>
           </div>
@@ -675,7 +677,7 @@ add_shortcode('about_item', function($atts){
     'logo-name'=>''
     ), $atts);
     return'
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="ab-item">
             <img src="'.$atts['image'].'" alt="">
             <span class="tag">'.$atts ['tag-name'].'</span>
@@ -725,7 +727,7 @@ add_shortcode('timeline', function($atts){
     'image-2'=>''
     ),$atts);
   return'
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
       <ul class="timeline">
           <li class="timeline-it"> 
             <p class="timeline-date">'.$atts['date-1'].'</p>
@@ -751,19 +753,19 @@ add_shortcode('timeline', function($atts){
         <li class="timeline-it"> 
             <p class="timeline-date">'.$atts['date-4'].'</p>
              <input class="radio" id="work5" name="works" type="radio" checked>
-            <div class="timeline-content">
+            <div class="timeline-content-last">
               <h3>'.$atts['timeline-title-4'].'</h3>
             </div>
         </li>  
       </ul>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="established">
            <h1>'.$atts['title'].'</h1>
            <p>'.$atts['content'].'</p>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="ab-img-it">
             <img src="'.$atts['image-1'].'" alt="">
             <img src="'.$atts['image-2'].'" alt="">
@@ -781,7 +783,7 @@ add_shortcode('mission', function($atts){
     'image'=> ''
     ), $atts);
   return'
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="mission-it">
         <h1>'.$atts['title'].'</h1>
         <p>'.$atts['content'].'</p>
@@ -791,7 +793,7 @@ add_shortcode('mission', function($atts){
         <p>'.$atts['content-1'].'</p>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="image-it">
         <img src="'.$atts['image'].'" alt="">
       </div>

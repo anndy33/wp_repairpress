@@ -875,6 +875,7 @@ nav.navigation.post-navigation {
 		padding-top: 20px;
 		padding-bottom: 100px;
 	}
+
 }
 @media screen and (max-width: 768px) and (min-width: 481px){
 	#testimonial .test-item .author-item h4{
@@ -977,6 +978,7 @@ article.about-us{
 	}
 	.ab-item{
 		position: relative;
+		margin-bottom: 50px;
 		span.tag{
 		font-size: 14px;
 		font-family: "Roboto Bold";
@@ -1028,7 +1030,6 @@ article.about-us{
 	}
 	ul.timeline{
 	margin-left: 0;
-
 	li.timeline-it{
 			// position: relative;
 			display: flex;
@@ -1036,31 +1037,93 @@ article.about-us{
 			color: @text-menu;
 		.timeline-content{
 			border-left: 5px solid #e4e4e4;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 30px;
+			margin-bottom: 5px;
+			margin-top: 40px;
+		}
+		.timeline-content-last{
+			border-left: none;
 			padding-top: 10px;
 			padding-bottom: 10px;
-			padding-left: 30px;
+			padding-left: 35px;
 		}
 		.timeline-content h3{
 			font-size: 16px;
-			margin-top: 0;
+			margin-top: -60px;
+		}
+		.timeline-content-last h3{
+				font-size: 16px;
+			margin-top: 0px;
 		}
 		p.timeline-date{
 			padding: 10px;
-			padding-right: 30px;
+			padding-right: 20px;
 			font-size: 16px;
 		}
 		input#work5{
-			width: 25px;
-			height: 25px;
-			left: 15px;
-			top: -10px;
+			width: 29px;
+			height: 29px;
+			left: 18px;
+			top: -2px;
 		}
 		&:hover{
-			.timeline-content h3, p.timeline-date{
-				color: @color3;
+				.timeline-content h3, p.timeline-date{
+					color: @color3;
+				}
 			}
 		}
 	}
+	input[type='radio']:after {
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 15px;
+	    top: -2px;
+	    left: -1px;
+	    position: relative;
+	    background-color: #d1d3d1;
+	    content: '';
+	    display: inline-block;
+	    visibility: visible;
+	    border: 2px solid white;
+		}
+	input[type='radio']:checked:after {
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 15px;
+	    top: -2px;
+	    left: -1px;
+	    position: relative;
+	    background-color: #ffffff;
+	    content: '';
+	    display: inline-block;
+	    visibility: visible;
+	    border: 8px solid #3aabd0;
+	}
 }
+footer.entry-footer{
+		display: none;
 }
 
+@media screen and(max-width: 1000px) and (min-width: 760px) {
+	.menu-toggle{
+		margin-top: -25px;
+		margin-right: 0;	
+	}
+}
+@media screen and(max-width: 380px) and(min-width: 275px) {
+	.menu-toggle{
+		margin-top: -25px;
+	}
+	article.about-us .ab-item span.tag{
+		top: 20%;
+	}
+	.ab-social .ab-social-it{
+		float: left !important;	
+		margin-left:20px !important;
+	}
+	.ab-item{
+		padding-bottom: 100px !important;
+	}
+}
