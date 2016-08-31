@@ -2036,6 +2036,135 @@ nav.navigation.post-navigation {
     padding-right: 0;
   }
 }
+article.about-us h1.entry-title {
+  display: none;
+}
+article.about-us .ab-heading {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "Roboto Bold";
+}
+article.about-us .ab-item {
+  box-shadow: 1px 0px 2px 2px #eceef1;
+  padding-bottom: 50px;
+}
+article.about-us .ab-item:hover img {
+  border-bottom: 5px solid #3baed4;
+}
+article.about-us .ab-item img {
+  border-bottom: 5px solid #d2d2d2;
+}
+article.about-us .ab-item h1 {
+  font-size: 27px;
+  font-family: "Roboto Bold";
+  text-transform: capitalize;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+article.about-us .ab-item p {
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: #999999;
+  line-height: 180%;
+  width: 86%;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+article.about-us .ab-item {
+  position: relative;
+}
+article.about-us .ab-item span.tag {
+  font-size: 14px;
+  font-family: "Roboto Bold";
+  background-color: #2f538a;
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+article.about-us .ab-social span {
+  float: left;
+  font-size: 16px;
+  font-family: "Roboto Bold";
+  margin-left: 20px;
+  color: #999999;
+  margin-top: 10px;
+}
+article.about-us .ab-social-it {
+  float: right;
+  right: 0;
+  margin-right: 28px;
+  font-size: 25px;
+  color: #bbbbbb;
+}
+article.about-us .ab-social-it i:hover {
+  color: #3baed4;
+}
+article.about-us .ab-img-it img {
+  margin-bottom: 35px;
+}
+article.about-us .about-timeline {
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+}
+article.about-us .established h1,
+article.about-us .mission-it h1,
+article.about-us .vision h1 {
+  font-family: "Roboto Bold";
+  font-size: 27px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+article.about-us .established p,
+article.about-us .mission-it p,
+article.about-us .vision p {
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: #999999;
+  line-height: 180%;
+  margin-bottom: 30px;
+}
+article.about-us ul.timeline {
+  margin-left: 0;
+}
+article.about-us ul.timeline li.timeline-it {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto Bold";
+  color: #aaaaaa;
+}
+article.about-us ul.timeline li.timeline-it .timeline-content {
+  border-left: 5px solid #e4e4e4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+article.about-us ul.timeline li.timeline-it .timeline-content h3 {
+  font-size: 16px;
+  margin-top: 0;
+}
+article.about-us ul.timeline li.timeline-it p.timeline-date {
+  padding: 10px;
+  padding-right: 30px;
+  font-size: 16px;
+}
+article.about-us ul.timeline li.timeline-it input#work5 {
+  width: 25px;
+  height: 25px;
+  left: 15px;
+  top: -10px;
+}
+article.about-us ul.timeline li.timeline-it:hover .timeline-content h3,
+article.about-us ul.timeline li.timeline-it:hover p.timeline-date {
+  color: #3baed4;
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

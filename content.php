@@ -15,21 +15,21 @@
 	</header><!-- .entry-header -->
 	</div>
 	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
+				<?php
+				/* translators: %s: Name of current post */
+				the_content( sprintf(
 				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+				) );
 
-			 get_post_meta('except');
-		?>
-		<?php
-			wp_link_pages( array(
+				get_post_meta('except');
+				?>
+				<?php
+				wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
 				'after'  => '</div>',
-			) );
-		?>
+				) );
+				?>			
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>

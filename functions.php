@@ -619,4 +619,182 @@ function create_shortcode_carousel($args, $content) {
         ';
 }
 add_shortcode( 'shortcode_carousel', 'create_shortcode_carousel' );
-
+//shortcode for about page
+//shortcode define row
+add_shortcode('row', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      <div class="row">
+    ';
+});
+//shortcode define endrow
+add_shortcode('endrow', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      </div>
+    ';
+});
+//shortcode for define container
+add_shortcode('container', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      <div class="container">
+    ';
+});
+//shortcode for end container
+add_shortcode('endcontainer', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      </div>
+    ';
+});
+//shortcode for heading
+add_shortcode('about_heading', function($atts){
+  $atts = shortcode_atts(array(
+    'heading'=>''
+    ), $atts);
+  return'
+        <div class="col-md-12">
+          <div class="ab-heading">
+            <h3>'.$atts['heading'].'</h3>
+          </div>
+        </div>  
+  ';
+});
+//shortcodefor item our team
+add_shortcode('about_item', function($atts){
+  $atts = shortcode_atts(array(
+    'image'=> '',
+    'tag-name'=>'',
+    'title'=>'',
+    'content'=>'',
+    'logo-name'=>''
+    ), $atts);
+    return'
+        <div class="col-md-4">
+          <div class="ab-item">
+            <img src="'.$atts['image'].'" alt="">
+            <span class="tag">'.$atts ['tag-name'].'</span>
+            <h1>'.$atts['title'].'</h1>
+            <p>'.$atts['content'].'</p>
+            <div class="ab-social">
+              <span>Meet me on: </span>
+              <div class="ab-social-it"> 
+                <i class="fa fa-'.$atts['logo-name'].'" aria-hidden="true"></i>
+                <i class="fa fa-'.$atts['logo-name'].'" aria-hidden="true"></i>
+                <i class="fa fa-'.$atts['logo-name'].'" aria-hidden="true"></i>
+                <i class="fa fa-'.$atts['logo-name'].'" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>  
+        </div>            
+    ';
+});
+//shortcode for timeline
+add_shortcode('ab-timeline', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      <div class="about-timeline">
+    ';
+});
+add_shortcode('end-ab-timeline', function($atts){
+  $atts= shortcode_atts(array(
+    ), $atts);
+    return'
+      </div>
+    ';
+});
+add_shortcode('timeline', function($atts){
+  $atts = shortcode_atts(array(
+    'date-1'=>'',
+    'timeline-title-1'=>'',
+    'date-2'=>'',
+    'timeline-title-2'=>'',
+    'date-3'=>'',
+    'timeline-title-3'=>'',
+    'date-4'=>'',
+    'timeline-title-4'=>'',
+    'title'=>'',
+    'content'=>'',
+    'image-1'=>'',
+    'image-2'=>''
+    ),$atts);
+  return'
+    <div class="col-md-3">
+      <ul class="timeline">
+          <li class="timeline-it"> 
+            <p class="timeline-date">'.$atts['date-1'].'</p>
+             <input class="radio" id="work5" name="works" type="radio" checked>
+            <div class="timeline-content">
+              <h3>'.$atts['timeline-title-1'].'</h3>
+            </div>
+        </li>  
+        <li class="timeline-it"> 
+            <p class="timeline-date">'.$atts['date-2'].'</p>
+             <input class="radio" id="work5" name="works" type="radio" checked>
+            <div class="timeline-content">
+              <h3>'.$atts['timeline-title-2'].'</h3>
+            </div>
+        </li>  
+        <li class="timeline-it"> 
+            <p class="timeline-date">'.$atts['date-3'].'</p>
+             <input class="radio" id="work5" name="works" type="radio" checked>
+            <div class="timeline-content">
+              <h3>'.$atts['timeline-title-3'].'</h3>
+            </div>
+        </li>  
+        <li class="timeline-it"> 
+            <p class="timeline-date">'.$atts['date-4'].'</p>
+             <input class="radio" id="work5" name="works" type="radio" checked>
+            <div class="timeline-content">
+              <h3>'.$atts['timeline-title-4'].'</h3>
+            </div>
+        </li>  
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div class="established">
+           <h1>'.$atts['title'].'</h1>
+           <p>'.$atts['content'].'</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+        <div class="ab-img-it">
+            <img src="'.$atts['image-1'].'" alt="">
+            <img src="'.$atts['image-2'].'" alt="">
+        </div>
+    </div>
+  ';
+});
+//shortcode for mission and vision
+add_shortcode('mission', function($atts){
+  $atts= shortcode_atts(array(
+    'title'=>'',
+    'content'=>'',
+    'title-1'=> '',
+    'content-1'=>'',
+    'image'=> ''
+    ), $atts);
+  return'
+    <div class="col-md-6">
+      <div class="mission-it">
+        <h1>'.$atts['title'].'</h1>
+        <p>'.$atts['content'].'</p>
+      </div>
+      <div class="vision">
+        <h1>'.$atts['title-1'].'</h1>
+        <p>'.$atts['content-1'].'</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="image-it">
+        <img src="'.$atts['image'].'" alt="">
+      </div>
+    </div>
+  ';
+});
